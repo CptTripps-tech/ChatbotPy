@@ -5,4 +5,6 @@ conversations:
 - - I have a problem with my Ticket
   - No problem, what is your Ticket-Number ?
 - - Here is my ticket number
-  - Thanks, i will redirect you to the responsible Employee
+  - Thanks, i will lookup the details of your ticket
+- - Whats the Status of my Ticket ?
+  - Sure thing, i will loookup the status. Whats the Ticket number ?

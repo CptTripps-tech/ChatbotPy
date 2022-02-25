@@ -2,8 +2,10 @@ categories:
 - Solutions
 conversations:
 - - Hardware
-  - I understand, i will lookup a possible Solution for you
-- - Software
+  - I understand, can you describe your problem further ?
+- - problem with hardware
+  - I understand, can you describe your problem further ?
+- - problem with software
   - Thanks, does the Software show you a specific Error Code or message ?
-- - Jira
+- - problem with jira
   - Ok, what is your Ticket-Number ?
