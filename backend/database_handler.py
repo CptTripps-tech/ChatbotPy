@@ -7,15 +7,15 @@ def create_connection():
     return sqlite3.connect(os.path.join(path, "ChatbotDB.db"))
 
 
-create_table = """
-        CREATE TABLE IF NOT EXISTS database (
+create_logs_table = """
+        CREATE TABLE IF NOT EXISTS logs (
         Request TEXT(20), 
         Response TEXT(30), 
         Created at DATE
         );"""
 
 insert_into_log_table = """
-        INSERT INTO database values(
+        INSERT INTO logs values(
         ?, 
         ?, 
         ?
@@ -25,8 +25,22 @@ insert_into_log_table = """
 def create_log_db():
     connection = create_connection()
     cursor = connection.cursor()
-    cursor.execute(create_table)
+    cursor.execute(create_logs_table)
     connection.commit()
+
+
+def get_jira_status(number):
+    connection = create_connection()
+    cursor = connection.cursor()
+    cursor.execute('SELECT status from jira where id_ticket = ?', [number])
+    return cursor.fetchone()[0]
+
+
+def get_code_label(code):
+    connection = create_connection()
+    cursor = connection.cursor()
+    cursor.execute('SELECT label from error_codes where code = ?', [code])
+    return cursor.fetchone()[0]
 
 
 def log(in_response_to, answer, created_at):
