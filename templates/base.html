@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet"
+          href=" https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.0/tailwind.min.css ">
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+</head>
+<body>
+
+<nav class="text-gray-700 bg-white border-t border-b body-font">
+    <div
+            class="container flex flex-col flex-wrap p-5 mx-auto md:items-center md:flex-row ">
+        <a class="flex items-center w-40 mb-4 font-medium text-gray-900 title-font md:mb-0"
+           data-unsp-sanitized="clean">
+            Service Desk
+        </a>
+        <nav
+                class="flex flex-wrap items-center justify-center text-base md:ml-auto md:mr-auto">
+            <a href="#"
+               class="mr-5 text-sm font-semibold text-gray-600 hover:text-gray-800"
+               data-unsp-sanitized="clean">Your Work</a>
+            <a href="#"
+               class="mr-5 text-sm font-semibold text-gray-600 hover:text-gray-800"
+               data-unsp-sanitized="clean">Projects</a>
+            <a href="#"
+               class="mr-5 text-sm font-semibold text-gray-600 hover:text-gray-800"
+               data-unsp-sanitized="clean">Dashboards</a>
+            <a href="#"
+               class="mr-5 text-sm font-semibold text-gray-600 hover:text-gray-800"
+               data-unsp-sanitized="clean">Create</a>
+        </nav>
+        <button
+                class="items-center px-8 py-3 mt-4 font-semibold text-blue-700 transition duration-500 ease-in-out transform bg-white border rounded-lg lg:inline-flex lg:mt-px hover:border-blue-800 hover:bg-blue-700 hover:text-white focus:ring focus:outline-none">
+            Log in
+        </button>
+    </div>
+</nav>
+
+<section class="text-black dark:text-white body-font lg:pt-20">
+    <div class="container px-5 pt-32 mx-auto lg:px-4 lg:py-4">
+        <div class="flex flex-col w-full mb-2 text-left md:text-center ">
+            <h1
+                    class="mb-2 text-6xl font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500 dark:text-white dark:text-white lg:text-8xl md:text-4xl"
+                    data-unsp-sanitized="clean">
+                <span>Chatbot Landing Page</span>
+            </h1>
+        </div>
+        <div class="flex mt-4 mb-6 md:justify-center">
+        </div>
+        <div class="flex lg:justify-center mt-5">
+            <img loading="lazy" class="object-cover object-center rounded-lg "
+                 alt="hero"
+                 src="{{ url_for('static',filename='images/robot_icon.jpg') }}"
+                 style=" ">
+        </div>
+    </div>
+</section>
+<div class="container">
+    <div class="chatbox">
+        <div class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png"
+                         alt="image">
+                </div>
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">Service support</h4>
+                    <p class="chatbox__description--header">Hey My name is Jarvis. How can I help you?</p>
+                </div>
+            </div>
+            <div class="chatbox__messages">
+                <div></div>
+            </div>
+            <div class="chatbox__footer">
+                <input type="text" placeholder="Write a message...">
+                <button class="chatbox__send--footer send__button">Send</button>
+            </div>
+        </div>
+        <div class="chatbox__button">
+            <button><img src="{{ url_for('static',filename='images/chatbox-icon.svg') }}"/></button>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static',filename='app.js') }}"></script>
+
+
+</body>
+</html>
+
