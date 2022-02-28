@@ -1,7 +1,6 @@
-import sys
-
 from flask import Flask, render_template, request, jsonify
 import backend.bot as bot
+import sys
 
 app = Flask(__name__)
 
