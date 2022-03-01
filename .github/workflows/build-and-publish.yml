@@ -24,7 +24,7 @@ jobs:
         run: echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
 
       - name: Build image
-        run: docker build --tag cpttripps66/chatbot-py:latest
+        run: docker build --tag cpttripps66/chatbot-py:latest .
 
       - name: Push image
         run: docker push cpttripps66/chatbot-py:latest
