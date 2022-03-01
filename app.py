@@ -1,9 +1,11 @@
 from flask import Flask, render_template, request, jsonify
+from flask_cors import CORS, cross_origin
 import backend.bot as bot
 import sys
 
 app = Flask(__name__)
-
+app.config['CORS_HEADERS'] = 'Content-Type'
+cors = CORS(app)
 
 @app.get("/")
 def index_get():
