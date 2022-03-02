@@ -1,0 +1,9 @@
+version: "2.3"
+services:
+  chatbotpy:
+    build: .
+    ports:
+      - "5000:5000"
+    image: "chatbotpy:latest"
+    volumes:
+      - .:/app
